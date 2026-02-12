@@ -1,8 +1,8 @@
 @charset "UTF-8"; 
-/*Codificação que suporta caracteres especiais da Língua Portuguesa (como ç, á, é, ã, etc.).*/
+/* Garante que o CSS seja interpretado com a codificação UTF-8, evitando problemas com acentos e símbolos tais como: acentos, símbolos, emojis, ç, etc.*/
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); 
-/*Serve para importar estilos externos (Internet) dentro do CSS.*/
+    /*serve para carregar outros arquivos CSS ou fontes externas dentro da folha de estilo*/
 
 @font-face { 
     /*é usada para referenciar uma fonte personalizada que será utilizada no projeto, normalmente hospedada localmente (em uma pasta do seu site) ou em um servidor*/
@@ -89,7 +89,13 @@ header {
     /*aplica um gradiente vertical no fundo do elemento, indo da cor --cor3 para --cor5*/
 
     min-height: 100px; 
-    /*garante que o elemento nunca fique menor que o valor definido, mas pode crescer se necessário.*/
+    /*garante que o elemento nunca fique menor que o valor definido, mas pode crescer se necessário.
+    Variações:
+        - height: Define altura fixa (não cresce além disso;
+        - min-height: Define a altura mínima (cresce se precisar);
+        - max-height: Define a altura máxima (não passa desse limite);
+
+    */
 
     text-align: center; 
     /* define como o texto será alinhado dentro do elemento: left (esquerdo), right (direito), justif (justificado)  e  center (centralidado)*/
@@ -97,7 +103,7 @@ header {
     padding-top: 20px; 
     /*adiciona espaço interno na parte do topo do elemento*/
 
-    padding-bottom: 20px; 
+    /*padding-bottom: 20px; 
     /*adiciona espaço interno na parte inferior do elemento*/
 }
 
@@ -127,7 +133,7 @@ header > h1 {
             100 a 900: Escala númerica (quanto maior, mais espesso.
         */
 
-    margin-bottom: -15px; 
+    margin-bottom: 9px; 
     /*controla o espaço externo abaixo do elemento. Com o valor 0px, você elimina esse espaço.*/
 
     text-shadow: 3px 3px 10px  rgba(0, 0, 0, 0.932); 
@@ -144,7 +150,7 @@ header > p {
 
     font-style: italic ;
 
-    font-size: 1.5em; 
+    /*font-size: 1.5em; 
     /* controla o tamanho da fonte e pode ser definido em pixels, unidades relativas ou porcentagens.
     Variações:
         - px → bom para precisão, mas pouco flexível.
@@ -155,7 +161,7 @@ header > p {
     color:antiquewhite ; 
     /*aplica a cor branca ao texto*/
 
-    max-width: 700px; 
+    /*max-width: 700px; 
     /*limita a largura máxima do elemento, mas permite que ele se ajuste para telas menores*/
 
     padding-right: 10px; 
@@ -173,7 +179,7 @@ header > p {
         margin: 10px 20px 30px 40px; 10px em cima, 20px direita, 30px embaixo e 40px esquerda.
         margin: auto; cenraliza horiontalmente.
     */
-
+    padding-bottom: 50px;
     text-shadow: 2px 2px 15px rgb(0, 0, 0); 
     /*cria sombras em textos, permitindo controlar posição, suavidade e cor. Os deslocamentos das posições são: horizontal, vertical e o raio de desfoque da sombra e a cor da sombra*/
 }
@@ -410,6 +416,13 @@ div.video > iframe {
     left: 5%;
     width: 90%;
     height: 90%;
+    /*garante que o elemento nunca fique menor que o valor definido, mas pode crescer se necessário.
+    Variações:
+        - height: Define altura fixa (não cresce além disso;
+        - min-height: Define a altura mínima (cresce se precisar);
+        - max-height: Define a altura máxima (não passa desse limite);
+
+    */
 
 }
 aside {
