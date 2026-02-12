@@ -193,7 +193,7 @@ nav {
     padding: 10px;
     /*adiciona 10px de espaço interno em todos os lados do elemento*/
 
-    box-shadow: 0px 7px 7px black; 
+    /*box-shadow: 0px 7px 7px black; 
     /*Definição da sombra da caixa com a sua cor*/
 }
 
