@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /*
+        #  = id
+        .  = class
+        :  = pseudo-class
+        :: = pseu-element
+        >  = children
+        a:visited = muda a cor de um link quando for clicado
+        a:hover = executa uma função quando o mouse toca o link selecionado
+        a:active = realiza uma tarefa quando por clicado
+
+    */
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: darkred;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: darkolivegreen;
+        }
+        .especial {
+            background-color: darkolivegreen;
+        }
+        .especial::before {
+            content: '⇨ ';
+        }
+
+        .especial::after {
+            content: ' ⇦';
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://github.com/gustavoguanabara" target="_blank">Repositório GitHub</a></li>
+        <li><a href="https://www.youtube.com/@cursoemvideo" target="_blank" class="especial">Canal do YouTube</a></li>
+        <li><a href="https://www.cursoemvideo.com/" target="_blank" class="especial">Site do Curso em Vídeo</a></li>
+    </ul>
+
+    <hr>
+    <p><a href="https://youtu.be/vMlrcOVr7po" target="_blank" rel="external">Pseudo-classes em CSS (Parte 2/2) - @Curso em Vídeo HTML5 e CSS3</a></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vMlrcOVr7po?si=ZFDdSknV8guOjR-z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+
+</html>

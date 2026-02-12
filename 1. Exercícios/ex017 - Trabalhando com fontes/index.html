@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex17 - Trabalhando com fontes em CSS</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--<link rel="stylesheet" href="style.css">-->
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body{
+            font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+            /*
+            Compatibilidade de Fontes para dispositivos:
+            https://www.w3schools.com/cssref/css_websafe_fonts
+
+            http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/cssref/css_websafe_fonts.asp.html#gsc.tab=0
+            
+            Medidas Absolutas
+            cm, mm, in(Polegadas), px, pt, pc(paica)
+
+            Medidas Relativas
+            em, ex, rem, vw, vh, %
+            Normalmente 16px=1em que é igual ao tamanho da fonte padrão
+
+            A W3SCHOOL recomenda a utilização das medidas:
+            Absolutas: px
+            Relativas: em
+            */
+        }
+        h1{
+            /* shorthand (informações em uma única linha para formatação de fonte)
+            SINTAXE: 
+                font: "font-style" + "font-weight" + "font-size" = "font-family"
+            SUBSTITUIÇÃO:
+            DESTE:
+                font-size: 1em(16px), 16px;
+                font-weight: bolder(Fonte em Negrito), lighter(Letra Fina), normal(Normal), bold(Negrito), bolder(Super Negrito);
+                font-style: italic(Fonte em Itálico)
+            PARA:
+                font:italic bolder 3em 'Work Sans' sans-serif;*/
+            
+            font:italic bolder 3em 'Work Sans', sans-serif; 
+            
+            text-decoration: underline; /*Sublinhado*/
+            text-align: center; /*Centralizado*/
+            }
+        h2{
+            font: italic lighter 2em 'Word Sans', sans-serif;
+        }
+        p{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>TRABALHANDO COM FONTES</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, expedita quasi! Exercitationem iste, soluta nemo doloremque dicta sed repellat assumenda adipisci architecto eveniet, rerum, molestias maiores dignissimos ducimus cupiditate? Similique.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem id libero quo eum, sapiente dolores. Aliquid vitae consequatur dignissimos aspernatur repudiandae. Ipsa ullam magni nostrum earum quos illum sed atque.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio libero amet perferendis, quia repudiandae quos eligendi atque ipsam dolorem. Obcaecati amet omnis ullam iste? Ab alias praesentium provident maiores saepe.</p>
+    <h2>Titulo 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga hic, quam quo veniam impedit vitae nostrum, corrupti voluptatibus beatae asperiores fugiat, atque amet officia placeat cupiditate explicabo eos facere rerum.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad maxime fuga recusandae aspernatur. Natus adipisci sed voluptates molestias nisi reiciendis quia eum a sequi, iure recusandae, delectus, totam deserunt facilis.</p>
+    <h2>Titulo 3</h2>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nobis sapiente ut, quis tempore deserunt quo, illo minus iste voluptatum ratione neque dolorem aliquam! Illo cumque quae aliquam? Iste, dicta.</p>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos esse cupiditate sit minima maiores eius commodi praesentium itaque. Officiis debitis accusamus nostrum ipsa iure voluptas unde non corporis consequatur! Facilis!</p>
+       <p>próximo vídeo será o número 11 - Famílias de fonte com CSS - @Curso em Vídeo HTML5 e CSS3 - <a href="https://www.youtube.com/watch?v=NGfPXJGiNH8&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=12" target="_blank" rel="external">Famílias de fonte com CSS - @Curso em Vídeo HTML5 e CSS3</a></p>
+</body>
+</html>

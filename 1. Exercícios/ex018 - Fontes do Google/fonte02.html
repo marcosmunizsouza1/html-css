@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Ex18b - Trabalhando com Fontes Externas Baixadas</title>
+    <style>
+        @font-face {
+            font-family: 'Love';
+            src: url('fontes/love\ larry.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+            /*
+                Tipos de formt()
+                - truetype (ttf)
+                - opentype (otf)
+                - embedded-opentype
+                - truetype-aat (Apple Advanced Typography)
+                - svg
+            */
+        @font-face {
+            font-family: 'vaseline';
+            src: url('fontes/Vaseline\ Extra.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'bighried';
+            src: url('fontes/Bighried\ Ranbell.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif; /*tipos de fontes*/
+        }
+
+        p {
+            text-align: justify; /*texto justificado*/
+            text-indent: 30px; /*texto recuado para início de frase*/
+        }
+
+        h1{
+            font-family:'love'; /*usar a fonte identificado no @font-face*/
+            font-size: 3em;
+            font-weight: normal;
+            color: blue;
+        }
+        h2{
+            font-family:'vaseline', Times, serif; /*usar a fonte identificado no @font-face*/
+            font-size: 3em;
+            font-weight: normal;
+            color: red;
+        }
+        h3{
+            font-family: 'bighried', Times, serif; /*usar a fonte identificado no @font-face*/
+            font-size: 3em;
+            font-weight: bold;
+            color: yellow;
+            background-color: darkgrey;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Fontes baixadas</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sint quo repellendus explicabo esse enim quis vitae? Quasi delectus numquam, quo, laboriosam quis minima veritatis cum sunt quaerat eaque non?</p>
+    <h2>Título 1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt tempora eligendi, in modi sed labore? Consectetur rerum animi tempore laborum nulla ratione doloremque odit, beatae tempora fugit similique commodi accusantium.</p>
+    <h3>Título 2</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt tempora eligendi, in modi sed labore? Consectetur rerum animi tempore laborum nulla ratione doloremque odit, beatae tempora fugit similique commodi accusantium.</p>
+    <hr>
+    <p>Próximo vídeo a assistir:<a href="https://www.youtube.com/watch?v=XTtfM0L7Co0&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=16"  target="_blank" rel="external" >Capturando as fontes usadas em um site - @Curso em Vídeo HTML5 e CSS3</a></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XTtfM0L7Co0?si=ZTjqbh54O7Is0XP-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <hr> 
+</body>
+</html>

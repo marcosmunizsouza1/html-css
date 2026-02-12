@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrutura HTML5 Explicada</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #F5F5F5;
+      display: flex;
+      justify-content: center;
+    }
+
+    .wrapper {
+      min-width: 300px;
+      max-width: 800px;
+      width: 100%;
+      margin: 20px auto;
+    }
+
+    .head-block, main, footer {
+      margin: 10px;
+      padding: 15px;
+      border-radius: 6px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    }
+
+    .head-block { background: #D3D3D3; }
+    main { background: #FFE5B4; }
+    footer { background: #4A4A4A; color: #F5F5F5; }
+
+    header { background: #A7C7E7; padding: 15px; border-radius: 6px; }
+    nav { background: #7DA2C6; color: white; padding: 10px; border-radius: 6px; }
+    article { background: #FFFFFF; color: #333; padding: 15px; border-radius: 6px; flex: 3; }
+    section { background: #D9D9D9; color: #333; margin: 10px 0; padding: 10px; border-radius: 6px; }
+    aside { background: #E6D8AD; color: #333; padding: 15px; border-radius: 6px; flex: 1; }
+
+    .content-area {
+      display: flex;
+      gap: 15px;
+    }
+
+    .titulo {
+      font-weight: bold;
+      font-size: 18px;
+      display: block;
+    }
+
+    .desc {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .head-block:hover, main:hover, footer:hover,
+    header:hover, nav:hover, article:hover, section:hover, aside:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border: 2px solid #7DA2C6;
+    }
+
+    @media (max-width: 768px) {
+      .content-area { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <!-- HEAD -->
+    <div class="head-block">
+      <span class="titulo">Head</span>
+      <span class="desc">Contém metadados da página, ou seja, informações que não aparecem diretamente para o usuário.</span>
+      <ul>
+        <li><code>&lt;title&gt;</code> → título exibido na aba do navegador</li>
+        <li><code>&lt;meta charset="UTF-8"&gt;</code> → define a codificação de caracteres</li>
+        <li><code>&lt;meta name="viewport"&gt;</code> → responsividade em dispositivos móveis</li>
+        <li><code>&lt;link rel="stylesheet"&gt;</code> → ligação com arquivos CSS</li>
+        <li><code>&lt;script&gt;</code> → inclusão de scripts JavaScript</li>
+        <li><code>&lt;meta name="description"&gt;</code> → descrição da página para SEO</li>
+        <li><code>&lt;meta name="author"&gt;</code> → autor da página</li>
+      </ul>
+    </div>
+
+    <!-- MAIN -->
+    <main>
+      <span class="titulo">Main</span>
+      <span class="desc">Área principal do conteúdo visível da página. Aqui ficam os elementos que o usuário realmente vê.</span>
+
+      <!-- HEADER EXEMPLO COMENTADO -->
+      <header>
+        <span class="titulo">Header</span>
+        <span class="desc">Cabeçalho da página, geralmente com título e logo.</span>
+
+        <!-- Exemplo de logotipo -->
+        <div class="logo">
+          <img src="logo.png" alt="Logotipo da Empresa">
+        </div>
+
+        <!-- Exemplo de título principal -->
+        <h1>Minha Página de Aprendizado</h1>
+
+        <!-- Exemplo de menu de navegação dentro do header -->
+        <nav>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="content-area">
+        <!-- ARTICLE EXEMPLO COMENTADO -->
+        <article>
+          <span class="titulo">Article</span>
+          <span class="desc">Representa um conteúdo independente e completo, como um artigo, post ou notícia.</span>
+
+          <!-- Exemplo de título do artigo -->
+          <h2>Aprendendo HTML5</h2>
+          <!-- O <h2> é usado para subtítulos dentro do artigo -->
+
+          <!-- Exemplo de parágrafo -->
+          <p>O HTML5 trouxe novas tags semânticas que ajudam a organizar melhor o conteúdo da página.</p>
+
+          <!-- SECTION EXEMPLO COMENTADO -->
+          <section>
+            <span class="titulo">Section</span>
+            <span class="desc">Uma seção temática dentro do artigo, usada para dividir o conteúdo.</span>
+            <h3>História do HTML</h3>
+            <p>O HTML surgiu nos anos 90 e evoluiu até chegar ao HTML5, que trouxe mais recursos.</p>
+          </section>
+
+          <section>
+            <span class="titulo">Section</span>
+            <span class="desc">Outra seção temática dentro do artigo.</span>
+            <h3>Vantagens do HTML5</h3>
+            <ul>
+              <li>Maior semântica</li>
+              <li>Melhor suporte multimídia</li>
+              <li>Compatibilidade com dispositivos móveis</li>
+            </ul>
+          </section>
+        </article>
+
+        <aside>
+          <span class="titulo">Aside</span>
+          <span class="desc">Conteúdo lateral, como links extras ou anúncios.</span>
+        </aside>
+      </div>
+    </main>
+
+    <!-- FOOTER EXEMPLO COMENTADO -->
+    <footer>
+      <span class="titulo">Footer</span>
+      <span class="desc">Rodapé da página, geralmente no final. Contém informações complementares.</span>
+
+      <!-- Exemplo de informações de contato -->
+      <p>Contato: contato@minhapagina.com | Telefone: (47) 99999-9999</p>
+
+      <!-- Exemplo de direitos autorais -->
+      <p>&copy; 2026 Minha Página de Aprendizado. Todos os direitos reservados.</p>
+
+      <!-- Exemplo de links para redes sociais -->
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </footer>
+  </div>
+
+</body>
+</html>

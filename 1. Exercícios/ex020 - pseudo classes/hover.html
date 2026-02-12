@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /*
+            display: nome - Esconder
+            display: block - Mostrar
+            
+            div > p - Paragrafo dentro da div
+            div:hover > p - Passar o mouse dentro do paragrafo         
+        */
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        div > p {
+            display: none; 
+        }
+
+        div:hover > p { 
+            display: block; 
+            background-color: green;
+            color: whitesmoke;
+            width: 300px; /*Tamanho da largura*/
+            height: 40px;/*Tamanho da altura*/
+        }
+
+        div:hover{
+            /*background-color: yellow;*/
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: red;
+        }       
+    </style>
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>Passe o mouse sobre o texto a abaixo</p>
+    <div>
+        Passe o mouse aqui!
+
+        <p>Texto Escondido...</p>
+    </div>
+    <p>Passe o mouse aqui!</p>
+</body>
+</html>

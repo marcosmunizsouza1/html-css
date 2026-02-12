@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex021 - Grouping Tags</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+
+        header {
+            background-color: whitesmoke;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav {
+            background-color: rgb(102, 102, 102);
+            padding: 3px;
+            box-shadow: /*inset*/ 2px 2px 4px 1px rgb(0 0 0 / 0.315);
+            /* deslocamento horizontal: 2px
+               deslocamento vertial: 2px
+               espalhamento:4px
+               alcançe: 1px
+               sombreamento: cor desejada
+               transparencia: 0.315*/
+            /*
+               Para colocar o sobreamento no interior na parte interna do box-shadow, usamos o inset antes dos parâmetros.
+               Ex.: 
+               box-shadow: inset 2px 2px 4px 1px rgb(0 0 0 / 0.315);
+            */
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+            
+        }
+
+        main {
+            background-color: whitesmoke;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 0px;
+            /* bordas:
+                1ª Medida Superior
+                   Esquerda: 10px
+                   Direita: 10px
+                2ª Medida Inferior
+                   Esquerda: 20px
+                    Direita: 20px
+            
+            O comando BORDER-RADIUS (raio da borda) serve para arredontar as bodas de um PADDING;
+            A configuração é:
+                Ex.:
+                    border-radius: Xpx Xpx Xpx Xpx; 
+            
+            Onde o 1º grupo refere-se a parte superior (Esq/Dir) e o 2º  grupo a parte inferior (Esq/Dir)
+            As medidas mais utilizadas são: 
+                - px (pixel)
+                - %  (percentual)
+
+            Se colocarmos uma única medida, como padrão será aplicada em todas as bordas.
+            Ex.:
+            border-radius: 10px;
+
+            Se colocarmos 2 medidas, serão aplicado os valores na Sup/Esq e Inf/Dir.
+            Ex.:
+            border-radius: 10px 20px;
+
+            Se colocarmos as 4 modidas, serão aplicados valores em todas as medidas, seguindo a ordem: Sup/Esq, SupDir, Inf/Esq e Inf/Dir. 
+            */
+            box-shadow: 4px 4px 9px 0px rgb(0, 0, 0, 0.384); 
+        }
+
+        article {
+            background-color: lightgray;
+            padding: 5px;
+        }
+
+        article > aside {
+            background-color: rgb(165, 165, 165);
+            padding: 5px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+        /*
+        div#bola {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        */
+    </style>
+</head>
+<body>
+    <header> <!-- Cabeçalho -->
+        <h1>Meu site</h1>
+
+        <nav>
+            <a href="#">ABA 1</a>
+            <a href="#">ABA 2</a>
+            <a href="#">ABA 3</a>
+            <a href="#">ABA 4</a>
+            <a href="#">ABA 5</a>
+        </nav>
+
+    </header>
+
+    <main> <!-- Corpo ou conteúdo principal -->
+
+        <section id="assuntos">
+            <p>Esporte Política Tecnologia</p>
+        </section>
+
+        <section id="noticias">
+            <article> <!-- artigos -->
+                <h2>Notícias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nobis officia sed illo nostrum, cumque molestiae consectetur quo, aut ex quaerat autem rerum earum dolores iusto! Non repudiandae autem sit?</p> <!-- Descrição do Artigo -->
+                <aside> <!-- Conteúdo periférico ao artigo -->
+                    <p.1>Artigo escrito por José da Silva</p.1>
+                </aside>
+            </article>
+        </section>
+
+    </main>
+
+    <footer> <!-- Rodapé -->
+        <p>Desenvolvido por Marcos Aurélio Muniz de Souza</p>
+    </footer>
+
+<!--    <div id="bola">
+
+    </div> -->
+
+        <p><a href="https://youtu.be/PGIrTzQqpqo" target="_blank" rel="external">Bordas decoradas - @Curso em Vídeo HTML5 e CSS3</a></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PGIrTzQqpqo?si=H5XbmNkErS_cNEY6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
